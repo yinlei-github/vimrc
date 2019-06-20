@@ -13,7 +13,13 @@ set showmatch
 set hlsearch
 set ignorecase
 
-"set relativenumber "显示光标所在的当前行的行号，其他行都为相对于该行的相对行号
+highlight ExtraWhitespace ctermbg=red guibg=darkgreen
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$\| \+\ze\t/
+
+autocmd BufWrite * execute '%s/\s\+$//g'
+
+" set relativenumber "显示光标所在的当前行的行号，其他行都为相对于该行的相对行号
 
 
 set nocompatible " 关闭 vi 兼容模式
@@ -47,10 +53,10 @@ set smartindent " 开启新行时使用智能自动缩进
 "set laststatus=2 " 显示状态栏 (默认值为 1, 无法显示状态栏)
 "set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ %c:%l/%L%)\ 
 " 设置在状态行显示的信息
-set foldenable " 开始折叠
-set foldmethod=syntax " 设置语法折叠
-set foldcolumn=0 " 设置折叠区域的宽度
-setlocal foldlevel=1 " 设置折叠层数为
+" set foldenable " 开始折叠
+" set foldmethod=syntax " 设置语法折叠
+" set foldcolumn=0 " 设置折叠区域的宽度
+" setlocal foldlevel=1 " 设置折叠层数为
 " set foldclose=all " 设置为自动关闭折叠 
 " nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
 " 用空格键来开关折叠

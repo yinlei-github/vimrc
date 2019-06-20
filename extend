@@ -1,1 +1,1 @@
-autocmd BufWrite * execute ":s/\s*$//"
+autocmd BufWrite * execute "%s/\s\+$//g"

@@ -4,5 +4,5 @@
 #yum install ctags -y
 #yum install cscope -y
 
-mv ~/.vimrc ~/.vimrc.bak
+mv ~/.vimrc ~/.vimrc.bak >/dev/null 2>&1
 cp vimrc ~/.vimrc
