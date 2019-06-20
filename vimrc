@@ -4,6 +4,18 @@
 "
 "=========================================================================
 
+set showmode
+set showcmd
+set expandtab
+set tabstop=2
+set textwidth=120
+set showmatch
+set hlsearch
+set ignorecase
+
+"set relativenumber "显示光标所在的当前行的行号，其他行都为相对于该行的相对行号
+
+
 set nocompatible " 关闭 vi 兼容模式
 syntax on " 自动语法高亮
 set number " 显示行号
@@ -27,14 +39,13 @@ set t_vb= " 置空错误铃声的终端代码
 " set matchtime=2 " 短暂跳转到匹配括号的时间
 set magic " 设置魔术
 set hidden " 允许在有未保存的修改时切换缓冲区，此时的修改由 vim 负责保存
-set guioptions-=T " 隐藏工具栏
-set guioptions-=m " 隐藏菜单栏
+"set guioptions-=T " 隐藏工具栏
+"set guioptions-=m " 隐藏菜单栏
 set smartindent " 开启新行时使用智能自动缩进
-set backspace=indent,eol,start
-" 不设定在插入状态无法用退格键和 Delete 键删除回车符
-set cmdheight=1 " 设定命令行的行数为 1
-set laststatus=2 " 显示状态栏 (默认值为 1, 无法显示状态栏)
-set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ %c:%l/%L%)\ 
+"set backspace=indent,eol,start " 不设定在插入状态无法用退格键和 Delete 键删除回车符
+"set cmdheight=1 " 设定命令行的行数为 1
+"set laststatus=2 " 显示状态栏 (默认值为 1, 无法显示状态栏)
+"set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ %c:%l/%L%)\ 
 " 设置在状态行显示的信息
 set foldenable " 开始折叠
 set foldmethod=syntax " 设置语法折叠
