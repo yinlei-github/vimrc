@@ -7,7 +7,7 @@
 set showmode
 set showcmd
 set expandtab
-set tabstop=2
+set tabstop=4
 set textwidth=120
 set showmatch
 set hlsearch
@@ -29,7 +29,7 @@ set cursorline " 突出显示当前行
 set ruler " 打开状态栏标尺
 "set shiftwidth=4 " 设定 << 和 >> 命令移动时的宽度为 4
 "set softtabstop=4 " 使得按退格键时可以一次删掉 4 个空格
-set tabstop=2 " 设定 tab 长度为 4
+"set tabstop=2 " 设定 tab 长度为 4
 set nobackup " 覆盖文件时不备份
 set autochdir " 自动切换当前目录为当前文件所在的目录
 filetype plugin indent on " 开启插件
@@ -51,12 +51,12 @@ set smartindent " 开启新行时使用智能自动缩进
 "set backspace=indent,eol,start " 不设定在插入状态无法用退格键和 Delete 键删除回车符
 "set cmdheight=1 " 设定命令行的行数为 1
 "set laststatus=2 " 显示状态栏 (默认值为 1, 无法显示状态栏)
-"set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ %c:%l/%L%)\ 
+"set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ %c:%l/%L%)\
 " 设置在状态行显示的信息
 " set foldenable " 开始折叠
 " set foldmethod=syntax " 设置语法折叠
 " set foldcolumn=0 " 设置折叠区域的宽度
 " setlocal foldlevel=1 " 设置折叠层数为
-" set foldclose=all " 设置为自动关闭折叠 
+" set foldclose=all " 设置为自动关闭折叠
 " nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
 " 用空格键来开关折叠
