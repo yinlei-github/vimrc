@@ -85,6 +85,14 @@ function! RunShell(Msg, Shell)
     echon 'done'
 endfunction
 
+" 输入一个字母即可补全
+let g:acp_behaviorKeywordLength = 1
+" 自动弹出是由键映射，对于通过移动来避免自动弹出是很有用
+let g:AutoComplPop_MappingDriven = 1
+" 修改GUI高亮参数 该设置全局有效
+hi Pmenu guibg=#444444
+hi PmenuSel ctermfg=7 ctermbg=4 guibg=#555555 guifg=#ffffff
+
 nmap <F8> :call RunShell("Generate systags", "ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --exclude=boost -f ~/.vim/systags /usr/include/")<cr>
 nmap <F9> :call RunShell("Generate tags", "ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --exclude=boost -f tags .")<cr>
 
