@@ -5,4 +5,6 @@
 #yum install cscope -y
 
 mv ~/.vimrc ~/.vimrc.bak >/dev/null 2>&1
+mv ~/.vim ~/.vim.bak > /dev/null 2>&1
 cp vimrc ~/.vimrc
+cp -r vim ~/.vim

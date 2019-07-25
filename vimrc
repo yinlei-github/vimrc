@@ -93,9 +93,9 @@ let g:AutoComplPop_MappingDriven = 1
 hi Pmenu guibg=#444444
 hi PmenuSel ctermfg=7 ctermbg=4 guibg=#555555 guifg=#ffffff
 
-nmap <F8> :call RunShell("Generate systags", "ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --exclude=boost -f ~/.vim/systags /usr/include/")<cr>
+nmap <F8> :call RunShell("Generate systags", "ctags -R --c++-kinds=+p --fields=+iaS --extra=+q -f ~/.systags /usr/include/glib-2.0/ /usr/include/linux/ /usr/include/c++/")<cr>
 nmap <F9> :call RunShell("Generate tags", "ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --exclude=boost -f tags .")<cr>
 
 
 set tags+=./tags
-set tags+=~/.vim/systags
+set tags+=~/.systags
