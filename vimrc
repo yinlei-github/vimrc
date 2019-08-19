@@ -8,6 +8,8 @@ set showmode
 set showcmd
 set expandtab
 set tabstop=4
+set shiftwidth=4
+
 set textwidth=120
 set showmatch
 set hlsearch
